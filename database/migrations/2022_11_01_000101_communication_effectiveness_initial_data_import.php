@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Artisan;
 use NovaAdvancedUI\Database\Seeders\NovaAdvancedUICourseSeeder;
 
-class NovaAdvancedUiInitialDataImport extends Migration
+class CommunicationEffectivenessInitialDataImport extends Migration
 {
     public function up()
     {
@@ -22,7 +22,7 @@ class NovaAdvancedUiInitialDataImport extends Migration
         // $seeder = new NovaAdvancedUICourseSeeder();
         // $seeder->run();
         Artisan::call('db:seed', [
-            '--class' => 'NovaAdvancedUI\Database\Seeders\NovaAdvancedUICourseSeeder',
+            '--class' => 'CommunicationEffectiveness\Database\Seeders\CommunicationEffectivenessCourseSeeder',
             '--force' => true,
         ]);
     }

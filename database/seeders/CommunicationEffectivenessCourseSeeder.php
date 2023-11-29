@@ -1,6 +1,6 @@
 <?php
 
-namespace NovaAdvancedUI\Database\Seeders;
+namespace CommunicationEffectiveness\Database\Seeders;
 
 use Eduka\Cube\Models\Course;
 use Eduka\Cube\Models\Domain;
@@ -9,15 +9,15 @@ use Eduka\Cube\Models\Variant;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-class NovaAdvancedUICourseSeeder extends Seeder
+class CommunicationEffectivenessCourseSeeder extends Seeder
 {
     private static $videoIndex = 0;
 
     public function run(): void
     {
         $course = Course::create([
-            'name' => 'Nova Advanced UI',
-            'canonical' => 'nova-advanced-ui',
+            'name' => 'Communication Effectiveness',
+            'canonical' => 'communication-effectiveness',
             'admin_name' => 'Bruno Falcao',
             // Launched testing.
             'launched_at' => now()->subHour(),
@@ -47,7 +47,7 @@ class NovaAdvancedUICourseSeeder extends Seeder
         ]);
 
         $domain = Domain::create([
-            'name' => env('NOVA_ADVANCED_UI_DOMAIN'),
+            'name' => 'communication-effectiveness.local',
             'course_id' => $course->id,
         ]);
 
