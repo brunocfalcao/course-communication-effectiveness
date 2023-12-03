@@ -24,7 +24,7 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'admin_email' => env('NOVA_ADVANCED_UI_EMAIL'),
             'twitter_handle' => env('NOVA_ADVANCED_UI_TWITTER'),
             'provider_namespace' => 'NovaAdvancedUI\\NovaAdvancedUIServiceProvider',
-            'lemonsqueezy_store_id' => env('LEMON_SQUEEZY_STORE_ID'),
+            'lemon_squeezy_store_id' => env('LEMON_SQUEEZY_STORE_ID'),
         ]);
 
         // TailwindUI variant.
@@ -33,7 +33,7 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'canonical' => 'nova-advanced-ui-tailwindui',
             'course_id' => $course->id,
             'description' => 'Main course - Tailwind UI',
-            'lemonsqueezy_variant_id' => env('NOVA_ADVANCED_UI_MAIN_VARIANT_TAILWIND_UI_ID'),
+            'lemon_squeezy_variant_id' => env('NOVA_ADVANCED_UI_MAIN_VARIANT_TAILWIND_UI_ID'),
         ]);
 
         // Just Library and Videos variant.
@@ -42,8 +42,8 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'canonical' => 'nova-advanced-ui-library',
             'course_id' => $course->id,
             'description' => 'Main course - Just Library and Videos',
-            'lemonsqueezy_variant_id' => env('NOVA_ADVANCED_UI_MAIN_VARIANT_LIBRARY_AND_VIDEOS_ID'),
-            'lemonsqueezy_price_override' => env('NOVA_ADVANCED_UI_MAIN_VARIANT_LIBRARY_AND_VIDEOS_PRICE'),
+            'lemon_squeezy_variant_id' => env('NOVA_ADVANCED_UI_MAIN_VARIANT_LIBRARY_AND_VIDEOS_ID'),
+            'lemon_squeezy_price_override' => env('NOVA_ADVANCED_UI_MAIN_VARIANT_LIBRARY_AND_VIDEOS_PRICE'),
         ]);
 
         $domain = Domain::create([
