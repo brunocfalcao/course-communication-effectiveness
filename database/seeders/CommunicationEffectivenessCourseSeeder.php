@@ -17,7 +17,7 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'canonical' => 'course-communication-effectiveness',
             'admin_name' => 'Bruno Falcao',
             // Launched testing.
-            //'launched_at' => now()->subHour(),
+            'launched_at' => now()->subHour(),
             'admin_email' => env('CE_EMAIL'),
             'twitter_handle' => env('CE_TWITTER'),
             'provider_namespace' => 'CommunicationEffectiveness\\CommunicationEffectivenessServiceProvider',

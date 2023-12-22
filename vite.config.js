@@ -11,7 +11,6 @@ export default defineConfig({
         ]),
     ],
     build: {
-        //assetsInclude: ['**/*.woff2', '**/*.woff', '**/*.ttf'],
         outDir: path.resolve(__dirname, `public/vendor/course-communication-effectiveness`),
     },
 });
