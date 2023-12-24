@@ -30,14 +30,14 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'course_id' => $course->id,
             'description' => 'Full course',
             'is_default' => true,
-            'lemon_squeezy_variant_id' => 191176,
+            'lemon_squeezy_variant_id' => env('CE_FULL_VARIANT_ID'),
         ]);
 
         Variant::create([
             'canonical' => 'course-communication-effectiveness-minimum',
             'course_id' => $course->id,
             'description' => 'Just the minimum',
-            'lemon_squeezy_variant_id' => 190543,
+            'lemon_squeezy_variant_id' => env('CE_MINIMUMS_VARIANT_ID'),
         ]);
 
         $domain = Domain::create([

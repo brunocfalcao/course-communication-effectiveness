@@ -20,7 +20,7 @@
         <div class="p-6 rounded-lg bg-gray-800 bg-opacity-80">
 
             @if(session('message') !== null)
-                {{ session('message') }}
+                {{ Nereus::trans(session('message'), null, 'nereus') }}
             @else
             <p class="text-center text-lg mb-4">Please proceed to buy the course</p>
             <form method="GET" action="{{ route('purchase.checkout') }}" target="_self" action="#">
@@ -29,7 +29,7 @@
                 <div class="flex flex-col items-center w-full max-w-sm px-4 space-y-4">
                     <button class="w-full flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         <i data-feather="send" class="text-white mr-2"></i>
-                        Purchase
+                        {{ Nereus::trans('purchase-button') }}
                     </button>
                 </div>
             </form>
