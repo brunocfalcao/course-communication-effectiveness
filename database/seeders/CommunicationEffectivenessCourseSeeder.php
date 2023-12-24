@@ -26,10 +26,18 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
 
         // Add variant.
         Variant::create([
-            'canonical' => 'course-communication-effectiveness',
+            'canonical' => 'course-communication-effectiveness-full',
             'course_id' => $course->id,
             'description' => 'Full course',
-            'lemon_squeezy_variant_id' => 190543
+            'is_default' => true,
+            'lemon_squeezy_variant_id' => 191176,
+        ]);
+
+        Variant::create([
+            'canonical' => 'course-communication-effectiveness-minimum',
+            'course_id' => $course->id,
+            'description' => 'Just the minimum',
+            'lemon_squeezy_variant_id' => 190543,
         ]);
 
         $domain = Domain::create([
