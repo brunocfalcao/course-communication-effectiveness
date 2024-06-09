@@ -1,0 +1,35 @@
+{
+    "name": "brunocfalcao/course-communication-effectiveness",
+    "description": "Course Communication Effectiveness",
+    "keywords": [
+        "brunocfalcao"
+    ],
+    "homepage": "https://github.com/brunocfalcao/course-communication-effectiveness",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bruno Falcão",
+            "email": "bruno.c.falcao@brunofalcao.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "brunocfalcao/eduka-nereus": "dev-master",
+        "brunocfalcao/backend-brunofalcao-pro": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "CommunicationEffectiveness\\": "src/",
+            "CommunicationEffectiveness\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
