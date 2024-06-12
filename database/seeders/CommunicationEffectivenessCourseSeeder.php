@@ -46,8 +46,9 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'clarity_code' => null,
 
             'twitter_handle' => env('CE_TWITTER'),
-            'prelaunched_at' => now()->subHours(1),
-            'launched_at' => now()->addDay(365),
+
+            'prelaunched_at' => now()->subDays(30),
+            'launched_at' => now()->subDays(15),
 
             'student_admin_id' => $student->id,
         ]);
