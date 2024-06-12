@@ -29,6 +29,7 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'domain' => env('CE_DOMAIN'),
             'provider_namespace' => 'CommunicationEffectiveness\\CommunicationEffectivenessServiceProvider',
             'backend_id' => $backend->id,
+            'clarity_code' => env('CE_CLARITY_CODE'),
 
             'lemon_squeezy_store_id' => env('LEMON_SQUEEZY_STORE_ID'),
             'lemon_squeezy_api_key' => env('LEMON_SQUEEZY_API_KEY'),
@@ -63,12 +64,21 @@ class CommunicationEffectivenessCourseSeeder extends Seeder
             'filename_email_logo' => $email,
         ]);
 
-        $variant = Variant::create([
-            'name' => 'Communication Effectiveness',
-            'canonical' => 'communication-effectiveness',
-            'description' => 'Communication Effectiveness (standard version)',
+        $variantSolo = Variant::create([
+            'name' => 'Communication Effectiveness (solo)',
+            'canonical' => 'communication-effectiveness-solo',
+            'description' => 'Communication Effectiveness (solo version)',
             'course_id' => $course->id,
-            'lemon_squeezy_variant_id' => env('CE_VARIANT_ID'),
+            'lemon_squeezy_price_override' => 55,
+            'lemon_squeezy_variant_id' => env('CE_VARIANT_ID_SOLO'),
+        ]);
+
+        $variantFull = Variant::create([
+            'name' => 'Communication Effectiveness (full)',
+            'canonical' => 'communication-effectiveness-full',
+            'description' => 'Communication Effectiveness (full version)',
+            'course_id' => $course->id,
+            'lemon_squeezy_variant_id' => env('CE_VARIANT_ID_FULL'),
         ]);
 
         $course->update(['student_admin_id' => $student->id]);
