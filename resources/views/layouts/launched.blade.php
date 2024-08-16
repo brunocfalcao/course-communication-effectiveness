@@ -29,7 +29,7 @@
                 <div class="flex flex-col items-center w-full max-w-sm px-4 space-y-4">
                     <button class="w-full flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         <i data-feather="send" class="text-white mr-2"></i>
-                        Purchase Default Variant
+                        Purchase Default Variant - {{ Nereus::course()->getDefaultVariant()->payment()->price()->currency() }} - {{ Nereus::course()->getDefaultVariant()->payment()->price()->current() }}
                     </button>
                 </div>
             </form>
